@@ -4,7 +4,7 @@ Il sito del brand **SpeedyScript**: script su misura, automazioni e integrazioni
 
 **Sito:** https://mikeminer.github.io/speedyscript/
 
-**Richieste:** il modulo inoltra le richieste a **mikforlani@gmail.com** tramite [FormSubmit](https://formsubmit.co/). L’indirizzo email di ricontatto del visitatore è obbligatorio. Non serve un account GitHub e le richieste non vengono pubblicate.
+**Richieste:** il modulo inoltra le richieste   tramite [FormSubmit](https://formsubmit.co/). L’indirizzo email di ricontatto del visitatore è obbligatorio. Non serve un account GitHub e le richieste non vengono pubblicate.
 
 ## Contenuti
 
