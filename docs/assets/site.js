@@ -1,6 +1,5 @@
 "use strict";
 document.documentElement.classList.remove("no-js");
-const SITE = Object.freeze({repository:"https://github.com/mikeminer/speedyscript",discussionCategory:"ideas"});
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const menu=document.querySelector(".menu-toggle"),navigation=document.querySelector("#navigation");
@@ -85,13 +84,13 @@ if(code&&filename&&panel&&runButton&&output){
 }
 
 const briefForm=document.querySelector("#brief-form"),result=document.querySelector("#brief-result");
-const preview=document.querySelector("#brief-preview"),requestLink=document.querySelector("#github-request");
+const preview=document.querySelector("#brief-preview"),previewButton=document.querySelector("#preview-request");
 const status=document.querySelector("#form-status"),copyButton=document.querySelector("#copy-brief");
-if(briefForm&&result&&preview&&requestLink&&status&&copyButton){
+if(briefForm&&result&&preview&&previewButton&&status&&copyButton){
   const service=document.querySelector("#service"),environment=document.querySelector("#environment");
-  const title=document.querySelector("#project-name"),details=document.querySelector("#project-details"),timing=document.querySelector("#timing");
-  briefForm.querySelector('[type="submit"]').disabled=false;
-  function invalidateBrief(){result.hidden=true;preview.value="";status.textContent="";copyButton.textContent="Copia il brief";}
+  const title=document.querySelector("#project-name"),details=document.querySelector("#project-details"),timing=document.querySelector("#timing"),email=document.querySelector("#contact-email");
+  previewButton.hidden=false;
+  function invalidateBrief(){result.hidden=true;preview.value="";status.textContent="";copyButton.textContent="Copia il riepilogo";}
   briefForm.addEventListener("input",invalidateBrief);briefForm.addEventListener("change",invalidateBrief);
   document.querySelectorAll("[data-service]").forEach(link=>{
     link.addEventListener("click",()=>{
@@ -100,30 +99,31 @@ if(briefForm&&result&&preview&&requestLink&&status&&copyButton){
       invalidateBrief();
     });
   });
-  briefForm.addEventListener("submit",event=>{
-    event.preventDefault();
-    const cleanTitle=title.value.trim(),cleanDetails=details.value.trim();
-    title.setCustomValidity(cleanTitle.length<5?"Scrivi un titolo di almeno 5 caratteri.":"");
-    details.setCustomValidity(cleanDetails.length<20?"Descrivi l’obiettivo in almeno 20 caratteri.":"");
-    if(!briefForm.reportValidity())return;
-    const body=["## Richiesta SpeedyScript","","**Progetto:** "+cleanTitle,"**Tipo di script:** "+service.value,"**Ambiente:** "+environment.value,"**Priorità:** "+timing.value,"","### Obiettivo e risultato atteso",cleanDetails,"","---","Brief preparato dal sito SpeedyScript. Dettagli e tempi da concordare."].join("\n");
-    const url=new URL(SITE.repository+"/discussions/new");
-    url.searchParams.set("category",SITE.discussionCategory);url.searchParams.set("title","[Richiesta] "+cleanTitle);url.searchParams.set("body",body);
-    // Complete text is always copyable; never silently truncate long Unicode.
-    if(url.href.length>6000)url.searchParams.delete("body");
-    preview.value=body;requestLink.href=url.href;result.hidden=false;
-    status.textContent="Brief pronto. Puoi copiarlo e rivederlo su GitHub prima di pubblicarlo.";
+  function validateRequest(){
+    title.value=title.value.trim();details.value=details.value.trim();email.value=email.value.trim();
+    title.setCustomValidity(title.value.length<5?"Scrivi un titolo di almeno 5 caratteri.":"");
+    details.setCustomValidity(details.value.length<20?"Descrivi l’obiettivo in almeno 20 caratteri.":"");
+    return briefForm.reportValidity();
+  }
+  // Native HTTPS POST keeps delivery independent of JavaScript and lets the
+  // provider show activation, anti-spam checks and failures without fake success.
+  briefForm.addEventListener("submit",event=>{if(!validateRequest())event.preventDefault();});
+  previewButton.addEventListener("click",()=>{
+    if(!validateRequest())return;
+    const body=["RICHIESTA SPEEDYSCRIPT","","Progetto: "+title.value,"Email di ricontatto: "+email.value,"Tipo di script: "+service.value,"Ambiente: "+environment.value,"Priorità: "+timing.value,"","OBIETTIVO E RISULTATO ATTESO",details.value].join("\n");
+    preview.value=body;result.hidden=false;
+    status.textContent="Riepilogo pronto. Nessuna email inviata: usa il pulsante di invio per inoltrare la richiesta.";
     document.querySelector("#brief-heading").focus({preventScroll:true});
     result.scrollIntoView({behavior:reducedMotion.matches?"auto":"smooth",block:"nearest"});
   });
-  [title,details].forEach(field=>field.addEventListener("input",()=>field.setCustomValidity("")));
+  [title,details,email].forEach(field=>field.addEventListener("input",()=>field.setCustomValidity("")));
   copyButton.addEventListener("click",async()=>{
     try{
       if(!navigator.clipboard)throw new Error("Clipboard unavailable");
-      await navigator.clipboard.writeText(preview.value);copyButton.textContent="Brief copiato";
-      status.textContent="Brief copiato. Apri Discussions per rivedere e pubblicare la richiesta.";
+      await navigator.clipboard.writeText(preview.value);copyButton.textContent="Riepilogo copiato";
+      status.textContent="Riepilogo copiato. Nessuna email inviata: usa il pulsante di invio nel modulo.";
     }catch{
-      preview.focus();preview.select();status.textContent="Testo selezionato: usa Copia dal tuo dispositivo, poi apri Discussions.";
+      preview.focus();preview.select();status.textContent="Testo selezionato: usa Copia dal tuo dispositivo. Per inviare la richiesta usa il pulsante nel modulo.";
     }
   });
 }

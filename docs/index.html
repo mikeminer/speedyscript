@@ -94,8 +94,8 @@ cartella = Path(<span class="syntax-string">"./documenti"</span>)
       </article>
       <article class="service-card service-featured" data-reveal>
         <div class="service-symbol" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m16 3 3.2 9.8L29 16l-9.8 3.2L16 29l-3.2-9.8L3 16l9.8-3.2z"/><circle cx="26" cy="6" r="2"/></svg></div>
-        <h3>Script per PixInsight</h3><p>Strumenti PJSR personalizzati, interfacce e flussi per l’astrofotografia. Verifiche native e criteri di qualità concordati.</p>
-        <div class="tags"><span>PJSR</span><span>Astrofotografia</span></div><a href="#progetto" data-service="Script PixInsight" class="service-link">Progettiamo il tuo strumento</a>
+        <h3>Script per PixInsight</h3><p>Strumenti PJSR personalizzati, interfacce e flussi per l’astrofotografia. Test di funzionamento e demo live insieme in videocall prima della consegna.</p>
+        <div class="tags"><span>PJSR</span><span>Astrofotografia</span></div><a href="#astroguard" class="service-link">Guarda AstroGuard</a>
       </article>
       <article class="service-card" data-reveal>
         <div class="service-symbol" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="3" y="10" width="9" height="12" rx="2"/><rect x="20" y="10" width="9" height="12" rx="2"/><path d="M12 16h8M7 5v5m18-5v5M7 22v5m18-5v5"/></svg></div>
@@ -108,6 +108,30 @@ cartella = Path(<span class="syntax-string">"./documenti"</span>)
         <div class="tags"><span>CSV / JSON</span><span>Report</span></div><a href="#progetto" data-service="File, dati e report" class="service-link">Mettiamo ordine nei dati</a>
       </article>
     </div>
+  </div></section>
+
+  <section class="section showcase-section" id="astroguard" aria-labelledby="astroguard-title"><div class="container showcase-layout">
+    <div class="showcase-copy" data-reveal>
+      <p class="eyebrow">UN PROGETTO REALIZZATO</p>
+      <div class="showcase-tags"><span>PixInsight 1.9.6</span><span>PJSR · JavaScript</span></div>
+      <h2 id="astroguard-title">AstroGuard.<br><span class="purple">Dal difetto<br>alla soluzione.</span></h2>
+      <p>Un mio script su misura per PixInsight: un’interfaccia dedicata per selezionare zone dell’immagine, vedere l’anteprima della correzione e applicarla su una nuova copia.</p>
+      <ul class="showcase-features">
+        <li><strong>Zone da correggere, sotto controllo.</strong> Selezione sull’immagine, coordinate e preview di PixInsight.</li>
+        <li><strong>Prima e dopo, affiancati.</strong> Il confronto rende visibile l’effetto dell’elaborazione prima di applicarla.</li>
+        <li><strong>Un risultato separato.</strong> Il pulsante «Applica su nuova copia» mantiene distinto l’originale.</li>
+        <li><strong>Lo proviamo insieme, prima della consegna.</strong> Testiamo il funzionamento degli script PixInsight e facciamo una demo live con te in videocall.</li>
+      </ul>
+      <p class="showcase-caption">Nell’immagine: AstroGuard 1.0 con una demo sintetica di un punto e una striscia artificiali. I pixel ricostruiti sono stime, non nuovi dati scientifici.</p>
+      <a class="button button-purple" href="#progetto" data-service="Script PixInsight">Vorrei uno strumento simile</a>
+    </div>
+    <figure class="showcase-figure" data-reveal>
+      <div class="showcase-image-head"><span class="showcase-live-dot" aria-hidden="true"></span> Interfaccia reale · AstroGuard</div>
+      <a href="./assets/astroguard-pixinsight.png" target="_blank" rel="noopener noreferrer" aria-label="Apri l’immagine completa dell’interfaccia AstroGuard">
+        <img src="./assets/astroguard-pixinsight.png" width="627" height="726" loading="lazy" decoding="async" alt="AstroGuard 1.0 in PixInsight 1.9.6: selezione delle zone, parametri e confronto affiancato prima e dopo la correzione di difetti artificiali.">
+      </a>
+      <figcaption>Uno script originale SpeedyScript, costruito intorno a un’esigenza concreta. <a href="./assets/astroguard-pixinsight.png" target="_blank" rel="noopener noreferrer">Apri l’interfaccia completa</a>.</figcaption>
+    </figure>
   </div></section>
 
   <section class="process-section section" id="metodo" aria-labelledby="process-title"><div class="container process-layout">
@@ -126,43 +150,49 @@ cartella = Path(<span class="syntax-string">"./documenti"</span>)
       <details><summary>Devo già sapere come realizzare lo script?</summary><p>Ti basta descrivere il problema e il risultato che cerchi. La scelta del linguaggio, del flusso e dell’interfaccia fa parte della progettazione.</p></details>
       <details><summary>Quanto tempo serve?</summary><p>Dipende dalla complessità, dall’ambiente e dalle integrazioni. Definiamo tempi e priorità dopo il brief: l’obiettivo è arrivare rapidamente a uno strumento utile, con verifiche adeguate.</p></details>
       <details><summary>Quanto costa uno script personalizzato?</summary><p>Il preventivo dipende dalle funzionalità richieste e dal lavoro necessario. Il primo passo è capire bene il tuo caso e concordare lo scope prima dello sviluppo.</p></details>
-      <details><summary>Puoi migliorare uno script che ho già?</summary><p>Sì: descrivi il comportamento attuale, gli errori o le modifiche desiderate. Per iniziare su GitHub usa un esempio che puoi condividere pubblicamente.</p></details>
-      <details><summary>Come ti contatto? Serve un account GitHub?</summary><p>Il contatto avviene su GitHub Discussions. Per pubblicare una discussione serve un account GitHub; dal sito puoi comunque preparare e copiare il brief. Le discussioni sono pubbliche.</p></details>
+      <details><summary>Puoi migliorare uno script che ho già?</summary><p>Sì: descrivi il comportamento attuale, gli errori o le modifiche desiderate. Per iniziare basta spiegare il problema, senza includere credenziali o dati riservati.</p></details>
+      <details><summary>Come ti contatto? Serve un account?</summary><p>Compila il modulo con la tua idea e un indirizzo email valido: la richiesta viene inoltrata a mikforlani@gmail.com, così posso risponderti. Non serve un account GitHub. Puoi anche scrivermi direttamente via email.</p></details>
     </div>
   </section>
 
   <section class="section project-section" id="progetto" aria-labelledby="project-title"><div class="container project-layout">
     <div class="project-copy">
       <p class="eyebrow">IL PROSSIMO SCRIPT È IL TUO</p><h2 id="project-title">Che cosa<br><span class="purple">mettiamo in moto?</span></h2>
-      <p>Raccontami la tua idea. Questo modulo prepara un brief da rivedere e pubblicare su GitHub Discussions.</p>
-      <div class="contact-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H9l-5 4z"/></svg><div><strong>Ci vediamo su GitHub</strong><p>Le richieste sono pubbliche: condividi l’obiettivo, non credenziali o dati riservati.</p><a href="https://github.com/mikeminer/speedyscript/discussions" target="_blank" rel="noopener noreferrer">Apri le discussioni</a></div></div>
+      <p>Raccontami la tua idea e lascia la tua email: riceverò la richiesta direttamente nella mia casella e potrò ricontattarti.</p>
+      <div class="contact-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H9l-5 4z"/></svg><div><strong>Parliamone via email</strong><p>La tua richiesta non viene pubblicata. Descrivi l’obiettivo senza inserire password, chiavi API o dati riservati.</p><a href="mailto:mikforlani@gmail.com">mikforlani@gmail.com</a></div></div>
     </div>
     <div class="brief-card">
-      <form id="brief-form">
+      <form id="brief-form" action="https://formsubmit.co/mikforlani@gmail.com" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="_subject" value="SpeedyScript — Nuova richiesta di script">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://mikeminer.github.io/speedyscript/grazie.html">
+        <div class="honeypot" aria-hidden="true"><label for="website">Lascia vuoto questo campo</label><input id="website" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
         <div class="form-two">
           <div class="form-field"><label for="service">Che tipo di script?</label><select id="service" name="service"><option>Automazione su misura</option><option>Script PixInsight</option><option>Integrazione API e AI</option><option>File, dati e report</option><option>Da definire insieme</option></select></div>
           <div class="form-field"><label for="environment">Dove deve funzionare?</label><select id="environment" name="environment"><option>Da definire</option><option>Windows</option><option>macOS</option><option>Linux</option><option>PixInsight</option><option>Browser / Web</option><option>Più ambienti</option></select></div>
         </div>
+        <div class="form-field"><label for="contact-email">La tua email di ricontatto <span class="required-label">(obbligatoria)</span></label><input id="contact-email" name="email" type="email" placeholder="nome@esempio.it" required maxlength="254" autocomplete="email" inputmode="email" aria-describedby="email-help"><span class="field-help" id="email-help">Userò questo indirizzo per risponderti sulla richiesta.</span></div>
         <div class="form-field"><label for="project-name">Dai un titolo alla tua idea</label><input id="project-name" name="project-name" type="text" placeholder="Es. Organizzare foto e generare un report" required minlength="5" maxlength="90" autocomplete="off"></div>
-        <div class="form-field"><label for="project-details">Che cosa vorresti ottenere?</label><textarea id="project-details" name="project-details" rows="5" placeholder="Descrivi l’attività di oggi e il risultato che vorresti. Aggiungi un esempio pubblico, se utile." required minlength="20" maxlength="1600"></textarea><span class="field-help">Da 20 a 1.600 caratteri. Evita dati riservati.</span></div>
+        <div class="form-field"><label for="project-details">Che cosa vorresti ottenere?</label><textarea id="project-details" name="project-details" rows="5" placeholder="Descrivi l’attività di oggi e il risultato che vorresti. Aggiungi un esempio, se utile." required minlength="20" maxlength="1600"></textarea><span class="field-help">Da 20 a 1.600 caratteri. Evita dati riservati.</span></div>
         <div class="form-field"><label for="timing">Qual è la tua priorità?</label><select id="timing" name="timing"><option>Definiamo insieme tempi e priorità</option><option>Vorrei partire quanto prima</option><option>Ho una scadenza da concordare</option><option>Sto esplorando l’idea</option></select></div>
-        <button class="button button-purple submit-button" type="submit" disabled>Prepara la mia richiesta</button>
-        <p class="form-note">Rivedi il brief prima di pubblicarlo su GitHub.</p>
+        <button class="button button-purple submit-button" type="submit">Invia richiesta via email</button>
+        <button class="preview-button" id="preview-request" type="button" hidden>Rivedi il riepilogo prima di inviare</button>
+        <p class="form-note">Invio tramite FormSubmit a mikforlani@gmail.com, con verifica antispam. <a href="./privacy.html">Come sono trattati i dati</a>.</p>
       </form>
       <div id="brief-result" class="brief-result" hidden>
-        <h3 id="brief-heading" tabindex="-1">La tua idea, pronta da condividere.</h3>
+        <h3 id="brief-heading" tabindex="-1">La tua richiesta, in anteprima.</h3>
         <label for="brief-preview" class="sr-only">Anteprima del brief</label><textarea id="brief-preview" rows="8" readonly spellcheck="false"></textarea>
-        <div class="brief-actions"><button type="button" class="button button-outline" id="copy-brief">Copia il brief</button><a class="button button-dark" id="github-request" href="https://github.com/mikeminer/speedyscript/discussions/new?category=ideas" target="_blank" rel="noopener noreferrer">Apri Discussions</a></div>
-        <p class="field-help">Su GitHub puoi rivedere il testo prima dell’invio. Se non viene importato, incolla il brief copiato.</p>
+        <div class="brief-actions"><button type="button" class="button button-outline" id="copy-brief">Copia il riepilogo</button></div>
+        <p class="field-help">Anteprima locale: per inoltrarla usa «Invia richiesta via email» nel modulo.</p>
       </div>
       <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-      <noscript><p>Puoi scrivere la tua richiesta direttamente su <a href="https://github.com/mikeminer/speedyscript/discussions" target="_blank" rel="noopener noreferrer">GitHub Discussions</a>.</p></noscript>
+      <noscript><p>Il modulo invia anche senza JavaScript. Puoi anche scrivere a <a href="mailto:mikforlani@gmail.com">mikforlani@gmail.com</a>.</p></noscript>
     </div>
   </div></section>
 </main>
 <footer class="footer">
   <div class="container footer-top"><a class="brand" href="#top" aria-label="SpeedyScript, torna all’inizio"><img src="./assets/mark.svg" width="34" height="34" alt=""><span>Speedy<span class="brand-light">Script</span><span class="brand-dot">.</span></span></a><p>Il tuo problema. Il tuo script. La tua scorciatoia.</p></div>
-  <div class="container footer-bottom"><span>© 2026 SpeedyScript</span><nav aria-label="Collegamenti nel piè di pagina"><a href="https://github.com/mikeminer/speedyscript" target="_blank" rel="noopener noreferrer">Codice del sito</a><a href="https://github.com/mikeminer/speedyscript/discussions" target="_blank" rel="noopener noreferrer">Discussions</a><a href="./privacy.html">Privacy</a></nav></div>
+  <div class="container footer-bottom"><span>© 2026 SpeedyScript</span><nav aria-label="Collegamenti nel piè di pagina"><a href="https://github.com/mikeminer/speedyscript" target="_blank" rel="noopener noreferrer">Codice del sito</a><a href="mailto:mikforlani@gmail.com">Contatti</a><a href="./privacy.html">Privacy</a></nav></div>
 </footer>
 </body>
 </html>
