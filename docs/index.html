@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="it" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpeedyScript — Script su misura, idee più veloci</title>
+  <meta name="description" content="Script personalizzati, automazioni Python e PowerShell, strumenti per PixInsight e integrazioni API. SpeedyScript trasforma la tua idea in codice utile.">
+  <meta name="theme-color" content="#7357ff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://mikeminer.github.io/speedyscript/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="SpeedyScript">
+  <meta property="og:title" content="SpeedyScript — La tua idea. Il tuo script. Più in fretta.">
+  <meta property="og:description" content="Automazioni, strumenti personalizzati e integrazioni. Il codice giusto, costruito intorno al tuo modo di lavorare.">
+  <meta property="og:url" content="https://mikeminer.github.io/speedyscript/">
+  <meta property="og:image" content="https://mikeminer.github.io/speedyscript/assets/social.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SpeedyScript — Script su misura">
+  <meta name="twitter:description" content="La tua idea. Il tuo script. Più in fretta.">
+  <meta name="twitter:image" content="https://mikeminer.github.io/speedyscript/assets/social.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/mark.svg">
+  <link rel="preload" as="font" href="./assets/fonts/manrope-variable.woff" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="./assets/site.css">
+  <script src="./assets/site.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"SpeedyScript","url":"https://mikeminer.github.io/speedyscript/","inLanguage":"it-IT","description":"Script su misura, automazioni e integrazioni software."}</script>
+</head>
+<body>
+<a class="skip-link" href="#contenuto">Vai al contenuto</a>
+<header class="header" id="top">
+  <div class="container nav-wrap">
+    <a class="brand" href="#top" aria-label="SpeedyScript, inizio">
+      <img src="./assets/mark.svg" width="38" height="38" alt="">
+      <span>Speedy<span class="brand-light">Script</span><span class="brand-dot">.</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Apri menu"><span></span><span></span></button>
+    <nav id="navigation" class="navigation" aria-label="Navigazione principale">
+      <a href="#servizi">Cosa realizzo</a><a href="#metodo">Come lavoro</a><a href="#faq">Domande frequenti</a>
+      <a class="button button-small button-dark" href="#progetto">Parliamo della tua idea</a>
+    </nav>
+  </div>
+</header>
+<main id="contenuto">
+  <section class="hero container" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="tiny-spark" aria-hidden="true">✳</span> SVILUPPO RAPIDO. SCRIPT SU MISURA.</p>
+      <h1 id="hero-title">La tua idea.<br>Il tuo script.<br><span class="purple">Più in fretta.</span></h1>
+      <p class="hero-description">Creo script e automazioni che mettono il codice al lavoro per te. Partiamo dal tuo obiettivo e arriviamo a uno strumento costruito intorno al tuo modo di lavorare.</p>
+      <div class="hero-actions"><a href="#progetto" class="button button-purple">Raccontami la tua idea</a><a href="#servizi" class="text-link">Esplora i servizi</a></div>
+      <p class="hero-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> Obiettivi chiari. Tempi concordati. Codice da usare.</p>
+    </div>
+    <div class="hero-visual" aria-label="Dimostrazione illustrativa di uno script personalizzato">
+      <div class="visual-orbit orbit-one" aria-hidden="true"></div><div class="visual-orbit orbit-two" aria-hidden="true"></div>
+      <div class="floating-label"><span aria-hidden="true">{ }</span> Fatto per il tuo workflow</div>
+      <div class="editor">
+        <div class="editor-top"><span class="editor-logo">S/</span><span id="demo-filename">organizza_file.py</span><span class="editor-label">DEMO</span></div>
+        <div class="demo-tabs" role="tablist" aria-label="Scegli una demo">
+          <button type="button" role="tab" aria-selected="true" aria-controls="demo-panel" id="tab-files" data-demo="files">File e dati</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="demo-panel" id="tab-pix" data-demo="pix">PixInsight</button>
+          <button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="demo-panel" id="tab-api" data-demo="api">API e AI</button>
+        </div>
+        <div id="demo-panel" role="tabpanel" aria-labelledby="tab-files" class="editor-body">
+          <div class="code-gutter" aria-hidden="true">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8</div>
+          <pre class="code-view"><code id="demo-code"><span class="syntax-comment"># Un compito ripetitivo, automatizzato.</span>
+<span class="syntax-keyword">from</span> pathlib <span class="syntax-keyword">import</span> Path
+
+cartella = Path(<span class="syntax-string">"./documenti"</span>)
+
+<span class="syntax-keyword">for</span> file <span class="syntax-keyword">in</span> cartella.iterdir():
+    <span class="syntax-function">organizza</span>(file)
+    <span class="syntax-function">aggiorna_report</span>(file)</code></pre>
+        </div>
+        <div class="terminal">
+          <div class="terminal-head"><span>OUTPUT D’ESEMPIO</span><button id="run-demo" type="button" aria-controls="demo-output"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 9 6-9 6z"/></svg><span>Esegui la demo</span></button></div>
+          <div id="demo-output" class="terminal-output" role="status" aria-live="polite"><p><span class="prompt">$</span> Pronto per il tuo prossimo compito.</p></div>
+        </div>
+        <div class="editor-bottom"><span>Personalizzato per te</span><span>Python · JavaScript · PowerShell</span></div>
+      </div>
+      <div class="speed-stamp" aria-hidden="true"><svg viewBox="0 0 60 60"><path d="M37 8 18 33h13l-7 19 21-28H31z"/></svg><span>Un’idea.<br>Più possibilità.</span></div>
+      <p class="demo-disclaimer">Demo illustrativa: nessun file del visitatore viene eseguito o modificato.</p>
+    </div>
+  </section>
+  <div class="capability-strip" aria-label="Ambiti di sviluppo"><div class="container capability-inner"><span>Il tuo problema, il codice giusto.</span><div><span>Python</span><span>JavaScript</span><span>PowerShell</span><span>PJSR / PixInsight</span><span>API & AI</span></div></div></div>
+
+  <section class="section services-section" id="servizi" aria-labelledby="services-title"><div class="container">
+    <div class="section-heading" data-reveal><div><p class="eyebrow">COSA POSSIAMO COSTRUIRE</p><h2 id="services-title">Meno passaggi.<br><span class="muted">Più possibilità.</span></h2></div><p>Uno strumento piccolo può fare una grande differenza. Scegli il punto di partenza: il resto lo definiamo sul tuo caso.</p></div>
+    <div class="services-grid">
+      <article class="service-card" data-reveal>
+        <div class="service-symbol" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m13 7-9 9 9 9m6-18 9 9-9 9"/></svg></div>
+        <h3>Automazioni su misura</h3><p>Operazioni ripetitive, comandi e flussi da semplificare. Script Python e PowerShell progettati per il tuo ambiente.</p>
+        <div class="tags"><span>Workflow</span><span>Desktop</span></div><a href="#progetto" data-service="Automazione su misura" class="service-link">Automatizziamo un’attività</a>
+      </article>
+      <article class="service-card service-featured" data-reveal>
+        <div class="service-symbol" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m16 3 3.2 9.8L29 16l-9.8 3.2L16 29l-3.2-9.8L3 16l9.8-3.2z"/><circle cx="26" cy="6" r="2"/></svg></div>
+        <h3>Script per PixInsight</h3><p>Strumenti PJSR personalizzati, interfacce e flussi per l’astrofotografia. Verifiche native e criteri di qualità concordati.</p>
+        <div class="tags"><span>PJSR</span><span>Astrofotografia</span></div><a href="#progetto" data-service="Script PixInsight" class="service-link">Progettiamo il tuo strumento</a>
+      </article>
+      <article class="service-card" data-reveal>
+        <div class="service-symbol" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="3" y="10" width="9" height="12" rx="2"/><rect x="20" y="10" width="9" height="12" rx="2"/><path d="M12 16h8M7 5v5m18-5v5M7 22v5m18-5v5"/></svg></div>
+        <h3>Integrazioni API e AI</h3><p>Collega servizi e strumenti che usi già. Integrazioni, assistenti e automazioni AI con un obiettivo concreto.</p>
+        <div class="tags"><span>API</span><span>Integrazioni</span></div><a href="#progetto" data-service="Integrazione API e AI" class="service-link">Colleghiamo gli strumenti</a>
+      </article>
+      <article class="service-card" data-reveal>
+        <div class="service-symbol" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M8 3h11l7 7v19H8zM19 3v8h7M12 17h10m-10 5h7"/></svg></div>
+        <h3>File, dati e report</h3><p>Organizza cartelle, trasforma CSV e JSON, raccogli dati e genera report. Un flusso chiaro, ripetibile e documentato.</p>
+        <div class="tags"><span>CSV / JSON</span><span>Report</span></div><a href="#progetto" data-service="File, dati e report" class="service-link">Mettiamo ordine nei dati</a>
+      </article>
+    </div>
+  </div></section>
+
+  <section class="process-section section" id="metodo" aria-labelledby="process-title"><div class="container process-layout">
+    <div class="process-intro" data-reveal><p class="eyebrow">COME LAVORO</p><h2 id="process-title">Dal tuo «mi servirebbe»<br>al tuo <span class="purple">«funziona».</span></h2><p>Rapidità significa partire bene: obiettivo, ambiente e risultato atteso. Così il codice risolve il problema giusto.</p><a href="#progetto" class="button button-dark">Iniziamo dal tuo obiettivo</a></div>
+    <div class="process-steps">
+      <article class="process-step" data-reveal><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H9l-5 4zM8 8h8m-8 4h5"/></svg></span><div><h3>Mi racconti cosa vuoi fare</h3><p>Descrivi l’attività, lo strumento che usi e il risultato desiderato. Un esempio aiuta a partire.</p></div></article>
+      <article class="process-step" data-reveal><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m7 8-4 4 4 4m10-8 4 4-4 4M14 5l-4 14"/></svg></span><div><h3>Definiamo soluzione e tempi</h3><p>Concordiamo funzionalità, priorità e verifiche. Lo sviluppo segue il caso d’uso, con uno scope chiaro.</p></div></article>
+      <article class="process-step" data-reveal><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h14v18H5zM9 7h6m-7 6 3 3 5-6"/></svg></span><div><h3>Ricevi lo script e le istruzioni</h3><p>Codice, indicazioni per usarlo e risultati delle verifiche effettuate nell’ambiente concordato.</p></div></article>
+    </div>
+  </div></section>
+  <section class="idea-band"><div class="container idea-inner"><span class="idea-brackets" aria-hidden="true">{ }</span><p>Il software dovrebbe adattarsi a te.<br><strong>Il tuo prossimo script può iniziare da qui.</strong></p><a class="button button-lime" href="#progetto">Ho un’idea</a></div></section>
+
+  <section class="section faq-section container" id="faq" aria-labelledby="faq-title">
+    <div class="faq-intro"><p class="eyebrow">DUE COSE DA SAPERE</p><h2 id="faq-title">Le idee sono tante.<br>Le risposte, chiare.</h2><p>Qualche dettaglio utile prima di partire.</p></div>
+    <div class="faq-list">
+      <details><summary>Devo già sapere come realizzare lo script?</summary><p>Ti basta descrivere il problema e il risultato che cerchi. La scelta del linguaggio, del flusso e dell’interfaccia fa parte della progettazione.</p></details>
+      <details><summary>Quanto tempo serve?</summary><p>Dipende dalla complessità, dall’ambiente e dalle integrazioni. Definiamo tempi e priorità dopo il brief: l’obiettivo è arrivare rapidamente a uno strumento utile, con verifiche adeguate.</p></details>
+      <details><summary>Quanto costa uno script personalizzato?</summary><p>Il preventivo dipende dalle funzionalità richieste e dal lavoro necessario. Il primo passo è capire bene il tuo caso e concordare lo scope prima dello sviluppo.</p></details>
+      <details><summary>Puoi migliorare uno script che ho già?</summary><p>Sì: descrivi il comportamento attuale, gli errori o le modifiche desiderate. Per iniziare su GitHub usa un esempio che puoi condividere pubblicamente.</p></details>
+      <details><summary>Come ti contatto? Serve un account GitHub?</summary><p>Il contatto avviene su GitHub Discussions. Per pubblicare una discussione serve un account GitHub; dal sito puoi comunque preparare e copiare il brief. Le discussioni sono pubbliche.</p></details>
+    </div>
+  </section>
+
+  <section class="section project-section" id="progetto" aria-labelledby="project-title"><div class="container project-layout">
+    <div class="project-copy">
+      <p class="eyebrow">IL PROSSIMO SCRIPT È IL TUO</p><h2 id="project-title">Che cosa<br><span class="purple">mettiamo in moto?</span></h2>
+      <p>Raccontami la tua idea. Questo modulo prepara un brief da rivedere e pubblicare su GitHub Discussions.</p>
+      <div class="contact-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H9l-5 4z"/></svg><div><strong>Ci vediamo su GitHub</strong><p>Le richieste sono pubbliche: condividi l’obiettivo, non credenziali o dati riservati.</p><a href="https://github.com/mikeminer/speedyscript/discussions" target="_blank" rel="noopener noreferrer">Apri le discussioni</a></div></div>
+    </div>
+    <div class="brief-card">
+      <form id="brief-form">
+        <div class="form-two">
+          <div class="form-field"><label for="service">Che tipo di script?</label><select id="service" name="service"><option>Automazione su misura</option><option>Script PixInsight</option><option>Integrazione API e AI</option><option>File, dati e report</option><option>Da definire insieme</option></select></div>
+          <div class="form-field"><label for="environment">Dove deve funzionare?</label><select id="environment" name="environment"><option>Da definire</option><option>Windows</option><option>macOS</option><option>Linux</option><option>PixInsight</option><option>Browser / Web</option><option>Più ambienti</option></select></div>
+        </div>
+        <div class="form-field"><label for="project-name">Dai un titolo alla tua idea</label><input id="project-name" name="project-name" type="text" placeholder="Es. Organizzare foto e generare un report" required minlength="5" maxlength="90" autocomplete="off"></div>
+        <div class="form-field"><label for="project-details">Che cosa vorresti ottenere?</label><textarea id="project-details" name="project-details" rows="5" placeholder="Descrivi l’attività di oggi e il risultato che vorresti. Aggiungi un esempio pubblico, se utile." required minlength="20" maxlength="1600"></textarea><span class="field-help">Da 20 a 1.600 caratteri. Evita dati riservati.</span></div>
+        <div class="form-field"><label for="timing">Qual è la tua priorità?</label><select id="timing" name="timing"><option>Definiamo insieme tempi e priorità</option><option>Vorrei partire quanto prima</option><option>Ho una scadenza da concordare</option><option>Sto esplorando l’idea</option></select></div>
+        <button class="button button-purple submit-button" type="submit" disabled>Prepara la mia richiesta</button>
+        <p class="form-note">Rivedi il brief prima di pubblicarlo su GitHub.</p>
+      </form>
+      <div id="brief-result" class="brief-result" hidden>
+        <h3 id="brief-heading" tabindex="-1">La tua idea, pronta da condividere.</h3>
+        <label for="brief-preview" class="sr-only">Anteprima del brief</label><textarea id="brief-preview" rows="8" readonly spellcheck="false"></textarea>
+        <div class="brief-actions"><button type="button" class="button button-outline" id="copy-brief">Copia il brief</button><a class="button button-dark" id="github-request" href="https://github.com/mikeminer/speedyscript/discussions/new?category=ideas" target="_blank" rel="noopener noreferrer">Apri Discussions</a></div>
+        <p class="field-help">Su GitHub puoi rivedere il testo prima dell’invio. Se non viene importato, incolla il brief copiato.</p>
+      </div>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      <noscript><p>Puoi scrivere la tua richiesta direttamente su <a href="https://github.com/mikeminer/speedyscript/discussions" target="_blank" rel="noopener noreferrer">GitHub Discussions</a>.</p></noscript>
+    </div>
+  </div></section>
+</main>
+<footer class="footer">
+  <div class="container footer-top"><a class="brand" href="#top" aria-label="SpeedyScript, torna all’inizio"><img src="./assets/mark.svg" width="34" height="34" alt=""><span>Speedy<span class="brand-light">Script</span><span class="brand-dot">.</span></span></a><p>Il tuo problema. Il tuo script. La tua scorciatoia.</p></div>
+  <div class="container footer-bottom"><span>© 2026 SpeedyScript</span><nav aria-label="Collegamenti nel piè di pagina"><a href="https://github.com/mikeminer/speedyscript" target="_blank" rel="noopener noreferrer">Codice del sito</a><a href="https://github.com/mikeminer/speedyscript/discussions" target="_blank" rel="noopener noreferrer">Discussions</a><a href="./privacy.html">Privacy</a></nav></div>
+</footer>
+</body>
+</html>
